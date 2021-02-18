@@ -11,8 +11,8 @@ chromedriver = "/usr/bin/chromedriver"
 os.environ["webdriver.chrome.driver"] = chromedriver
 driver = webdriver.Chrome(chrome_options=chrome_options,executable_path=chromedriver)
 
-username = ${{secrets.USERNAME}}  # 账号
-password = ${{secrets.PASSWORD}}  # 密码
+username: ${{secrets.USERNAME}}  # 账号
+password: ${{secrets.PASSWORD}}  # 密码
 login_url = 'https://hacpai.com/login?goto=https%3A%2F%2Fhacpai.com%2F'  # 登录URL
 checkin_url = 'https://hacpai.com/activity/checkin'  # 签到URL
 

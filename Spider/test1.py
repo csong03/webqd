@@ -12,8 +12,8 @@ chromedriver = "/usr/bin/chromedriver"
 os.environ["webdriver.chrome.driver"] = chromedriver
 driver = webdriver.Chrome(chrome_options=chrome_options,executable_path=chromedriver)
 
-USERNAME = 'jgku110764@163.com'  # 账号
-PASSWORD = 'ys0106080732'  # 密码
+USERNAME = ${{ secrets.USERNAME }}  # 账号
+PASSWORD = ${{ secrets.PASSWORD }}  # 密码
 login_url = 'https://acgwcy.com/'  # 登录URL
 checkin_url = 'https://acgwcy.com/mission/today'  # 签到URL
 

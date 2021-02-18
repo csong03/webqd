@@ -24,7 +24,7 @@ driver.find_element_by_xpath('//*[@id="login-box"]/div/div/div/form/div[2]/label
 time.sleep(1) 
 driver.find_element_by_xpath('//*[@id="login-box"]/div/div/div/form/div[2]/label[5]/input').send_keys(PASSWORD)
 time.sleep(1) 
-driver.find_element_by_xpath('//*[@id="login-box"]/div/div/div/form/div[2]/div[3]/button').click()  # 登录
+driver.find_element_by_xpath('/html/body/div/div[2]/div[2]/div/div/div/form/div[2]/div[3]/button').click()  # 登录
 time.sleep(3)
 driver.get(checkin_url)
 time.sleep(1)

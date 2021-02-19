@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
 import os
 import time
 
@@ -19,10 +18,6 @@ login_url = 'https://xdlciyuan.com/'  # 登录URL
 checkin_url = 'https://xdlciyuan.com/mission/today'  # 签到URL
 
 driver.get(login_url)  # 进入登录页面
-button = WebDriverWait(driver, 20).until(
-            EC.visibility_of_element_located((By.XPATH, '//*[@id="page"]/div[1]/div/div[2]/div/div[2]/div[3]/div/div/div[1]/button[1]'))
-        )
-driver.execute_script("arguments[0].click();", button)
 #button_js = 'document.querySelector("#page > div.site-header.mg-b > div > div.header.menu-center > div > div.wrapper > div.header-user > div > div > div.header-login-button > button.empty.mobile-hidden").click()'
 #driver.execute_script(button_js)
 #driver.find_element_by_xpath('//*[@id="page"]/div[1]/div/div[2]/div/div[2]/div[3]/div/div/div[1]/button[1]').click()  # 使用社区账号登录

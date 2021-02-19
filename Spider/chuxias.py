@@ -19,6 +19,9 @@ checkin_url = 'https://acgdonghua.com/task'  # 签到URL
 
 driver.get(login_url)  # 进入登录页面
 driver.find_element_by_xpath('//*[@id="inn-sign__login-btn__container"]/a').click()  # 使用社区账号登录
+def hover(self,by,value):
+      element = self.findElement(by,value)
+      ActionChains(self.driver).move_to_element(element).perform()
 time.sleep(2)  # 延时加载
 driver.find_element_by_xpath('//*[@id="inn-sign__dialog__fm"]/div/div/div/div[2]/label/span[2]/input').send_keys(USERNAME)# 填充用户名和密码
 time.sleep(1) 

@@ -17,9 +17,10 @@ WYYNAME = '${{ secrets.WYYNAME }}'  # 账号
 WYYPSW = '${{ secrets.WYYPSW }}'  # 密码
 
 driver.get('https://api.wanpeng.life/')
-sleep(1)
+sleep(2)
 driver.find_element_by_xpath('//*[@id="uin"]').send_keys(WYYNAME)
 driver.find_element_by_xpath('//*[@id="pwd"]').send_keys(WYYPSW)
+sleep(1)
 driver.find_element_by_xpath('//*[@id="submit"]').click()
 sleep(1)
 driver.find_element_by_xpath('//*[@id="sign"]').click()
